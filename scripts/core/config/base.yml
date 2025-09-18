@@ -59,9 +59,9 @@ hub_strategy: checkpoint
 hub_token:
 
 
-saves_per_epoch: 4
+saves_per_epoch: 5
 warmup_steps: 10
-evals_per_epoch: 4
+evals_per_epoch: 5
 eval_table_size:
 eval_max_new_tokens: 128
 max_steps: 10

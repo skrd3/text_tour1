@@ -8,14 +8,14 @@ GRPO_CONFIG = {
         "lr": 0.00015,
         "distributed": "ddp",
         "gpu_count": 1,
-        "batch_size": 40,
+        "batch_size": 42,
         "vllm_gpu_memory_utilization": 0.4
     },
     "1_2_b": {
         "lr": 7.5e-5,
         "distributed": "ddp",
         "gpu_count": 1,
-        "batch_size": 40,
+        "batch_size": 42,
         "vllm_gpu_memory_utilization": 0.4
     },
     "2_4_b": {

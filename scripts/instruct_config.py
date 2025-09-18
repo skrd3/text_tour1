@@ -17,7 +17,7 @@ INSTRUCT_CONFIG = {
         "lr": 0.0001,
         "distributed": "ddp",
         "gpu_count": 1,
-        "batch_size": 140,
+        "batch_size": 120,
         "use_lora": False
     },
     "1_2_b": {
@@ -265,7 +265,7 @@ def get_training_json(train_info: dict) -> dict:
     train_request = deepcopy(train_info)
     train_request["save_before_remaining_time"] = 3
     train_request["adjust_batch_size"] = False
-    train_request["periodic_save_steps"] = 500
+    train_request["periodic_save_steps"] = 400
     
     return {
         "train_request": train_request,
