@@ -193,7 +193,7 @@ def main():
         "--max-steps", type=int, help="Max steps to use for training", default=-1
     )
     parser.add_argument(
-        "--retries", type=int, help="Number of retries", default=5
+        "--retries", type=int, help="Number of retries", default=10
     )
     parser.add_argument(
         "--min-steps", type=int, help="Min steps to use for training", default=100
@@ -312,8 +312,8 @@ def main():
                         train_cmd, "per_device_train_batch_size"
                     )
                     current_batch_size = int(current_batch_size)
-                    if current_batch_size > 1:
-                        new_batch_size = current_batch_size // 2
+                    if current_batch_size > 8:
+                        new_batch_size = current_batch_size - 8
                         print(
                             f"Reducing batch size from {current_batch_size} to {new_batch_size}",
                             flush=True,
